@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700");
+
+* { box-sizing: border-box; }
+
+body{
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(-135deg, #873782, #212e6d);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-heading{
+  color: white;
+  margin-top: 10px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+  padding: 0 20px;
+}
+
+.filter-box {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-box option {
+  background: #333;
+  color: white;
+}
+
+.request-card{
+  position: relative;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.request-image{
+  margin-bottom: 14px;
+}
+
+.request-image img{
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.request-text{
+  color: white;
+}
+
+.request-text p{
+  margin: 6px 0;
+  line-height: 1.45;
+}
+
+.status{
+  font-weight: bold;
+}
+
+.status.pending{ color: #ffcc00; }
+.status.approved{ color: #4CAF50; }
+.status.rejected{ color: #f44336; }
+.status.checked_out{ color: #00bcd4; }
+.status.returned{ color: #9e9e9e; }
+
+.actions{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  transition: .2s;
+  background: rgba(255,255,255,0.05);
+}
+
+.btn:hover{
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.10);
+}
+
+.btn.danger{
+  border-color: rgba(244,67,54,0.6);
+}
+
+.btn.danger:hover{
+  border-color: rgba(244,67,54,1);
+}
+
+.request-card.unavailable{
+  overflow: hidden;
+}
+
+.unavailable-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.701);
+  pointer-events: none;
+}
+
+.request-card.unavailable .actions{
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 700px){
+  .container{ padding: 16px; }
+  .filter-container{ padding: 0 16px; }
+
+  .request-image img{
+    max-height: 140px;
+  }
+}

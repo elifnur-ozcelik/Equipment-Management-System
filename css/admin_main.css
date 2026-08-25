@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700");
+
+* { box-sizing: border-box; }
+
+body{
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(-135deg, #873782, #212e6d);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.admin-shell{
+  width: min(1100px, 92vw);
+  margin: 40px auto 60px;
+}
+
+.admin-title{
+  color: #fff;
+  margin: 0 0 18px;
+}
+.admin-title h1{
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+.admin-title p{
+  margin: 0;
+  opacity: 0.9;
+}
+
+.alert{
+  margin: 14px 0 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-weight: 600;
+}
+
+.top-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 18px;
+}
+
+.filter-form{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.filter-form label{
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.filter-form select{
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.15);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.users-list{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  background: #fed6fc;
+}
+
+.user-center{
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-name{
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #515151;
+  font-size: 16px;
+}
+
+.user-center p{
+  margin: 4px 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.45;
+}
+
+.user-right{
+  min-width: 160px;
+  text-align: right;
+}
+
+.actions{
+  margin-top: 10px;
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn{
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #515151;
+  transition: .2s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.user-right .btn{
+    border: 1px solid #000000;
+}
+
+.btn:hover{
+  border-color: #aedaa6;
+  color: #5b9c5b;
+}
+
+.btn.danger:hover{
+  border-color: #e3a6a6;
+  color: #8a2d2d;
+}
+
+.card-box{
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card-box h2{
+  margin: 0 0 14px;
+  color:white;
+}
+
+.card-box label{
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 700;
+  color: #515151;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.card-box input,
+.card-box select{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-actions{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px){
+  .user-card{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-right{
+    width: 100%;
+    text-align: left;
+    min-width: 0;
+  }
+
+  .actions{
+    justify-content: flex-start;
+  }
+
+  .top-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-form{
+    justify-content: space-between;
+  }
+}
