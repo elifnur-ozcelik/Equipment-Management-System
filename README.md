@@ -66,7 +66,7 @@ Here are some screenshots of the project:
 
 ## License  
 
-See the [LICENSE](LICENSE) file for copyright and usage information.
+This project is licensed under the terms of the [LICENSE](LICENSE) file.
 
 ## Last Updated  
 
